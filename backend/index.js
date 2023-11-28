@@ -17,6 +17,10 @@ mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopolo
     .then(() => console.log('DB connected'))
     .catch(err => console.error(err))
 
+
+app.use('/users', require('./controllers/users'))
+app.use('/authentication', require('./controllers/authentication'))   
+
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
