@@ -1,6 +1,6 @@
 const router = require('express').Router()
-const User = require('../models/user')
-const Books = require('../models/book')
+const User = require('../models/User')
+const Books = require('../models/Book')
 
 // GET page of all itineraries
 router.get('/', async (req,res) =>{
