@@ -3,26 +3,26 @@ import { useHistory } from "react-router"
 
 function NewReview({  onSubmit }) {
 
-    const [authors, setAuthors] = useState([])
+    const [reviewers, setreviewers] = useState([])
 
     const [review, setReview] = useState({
         review: '',
         stars: 3,
-        authorId: ''
+        reviewerId: ''
     })
 
     useEffect(() => {
         const fetchData = async () => {
             const response = await fetch(`http://localhost:5000/users`)
             const users = await response.json()
-            setReview({ ...review, authorId: users[0]?.userId})
-            setAuthors(users)
+            setReview({ ...review, reviewerId: users[0]?.userId})
+            setReviewers(users)
         }
         fetchData()
     }, [])
 
-    let authorOptions = authors.map(author => {
-        return <option key={author.userId} value={author.userId}>{user.username}</option>
+    let reviewerOptions = reviewers.map(reviewer => {
+        return <option key={reviewer.userId} value={reviewer.userId}>{user.username}</option>
     })
 
     function handleSubmit(e) {
@@ -31,7 +31,7 @@ function NewReview({  onSubmit }) {
         setReview({
             review: '',
             stars: 3,
-            authorId: authors[0]?.userId
+            reviewerId: reviewers[0]?.userId
         })
     }
     return (

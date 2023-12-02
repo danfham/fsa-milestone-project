@@ -1,0 +1,25 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cjs-module": "^1.5.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.0.2",
+    "mysql2": "^3.6.5",
+    "pg": "^8.11.3",
+    "react": "^18.2.0",
+    "sequelize": "^6.35.1"
+  }
+}
