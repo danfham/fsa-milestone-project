@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
 
 const reviewSchema = mongoose.Schema({
-    game:{
+    book:{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Game'
+        ref: 'Book'
     },
     review:{
         type: String

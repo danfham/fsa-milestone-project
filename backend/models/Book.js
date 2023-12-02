@@ -1,16 +1,16 @@
 const mongoose = require('mongoose')
 
-const gameSchema = new mongoose.Schema({
-    name: {
+const bookSchema = new mongoose.Schema({
+    title: {
+        type: String,
+        require: true
+    },
+    author: {
         type: String,
         require: true
     },
     releaseDate: {
-        type: Date,
-        require: true
-    },
-    poster: {
-        type: Image,
+        type: String,
         require: true
     },
     ratings: [{
@@ -18,11 +18,17 @@ const gameSchema = new mongoose.Schema({
     }],
     averageRating: {
         type: Number
+    },
+    isbn: {
+        type: String
+    },
+    pages: {
+        type: Number
     }
 
 })
 
-gameSchema.methods.getRating = function(){
+bookSchema.methods.getRating = function(){
     
     average = 0
 
@@ -33,4 +39,4 @@ gameSchema.methods.getRating = function(){
     return average
 }
 
-module.exports = mongoose.model('Game', gameSchema)
+module.exports = mongoose.model('Book', bookSchema)

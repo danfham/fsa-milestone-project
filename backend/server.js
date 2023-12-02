@@ -3,14 +3,18 @@ const app = express()
 require('dotenv').config()
 const port = process.env.PORT
 const mongoose = require('mongoose')
+const bookController = require('./controllers/book')
 
 // MIDDLEWARE
-app.use(methodOverride('_method'))
+// app.use(methodOverride('_method'))
 app.use(express.urlencoded({extended: true}))
 app.use(express.static('public'))
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
-app.engine('jsx', require('express-react-views').createEngine())
+// app.engine('jsx', require('express-react-views').createEngine())
+
+//routes
+app.use('/book', bookController)
 
 // MongoDB Connection
 mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true})
