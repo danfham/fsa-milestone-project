@@ -1,14 +1,17 @@
-//import logo from './logo.svg';
-//import './App.css';
+// src/App.js
+
+import React from 'react';
+import Auth from './components/Auth/Auth';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header>
-        "Hello World"
-      </header>
+    <div className="app-container">
+      <Auth />
     </div>
   );
 }
 
 export default App;
+
+  
