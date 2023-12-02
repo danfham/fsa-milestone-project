@@ -10,11 +10,7 @@ const bookSchema = new mongoose.Schema({
         require: true
     },
     releaseDate: {
-        type: Date,
-        require: true
-    },
-    cover: {
-        type: Image,
+        type: String,
         require: true
     },
     ratings: [{
@@ -22,11 +18,17 @@ const bookSchema = new mongoose.Schema({
     }],
     averageRating: {
         type: Number
+    },
+    isbn: {
+        type: String
+    },
+    pages: {
+        type: Number
     }
 
 })
 
-gameSchema.methods.getRating = function(){
+bookSchema.methods.getRating = function(){
     
     average = 0
 
