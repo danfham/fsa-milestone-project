@@ -2,7 +2,7 @@ const router = require('express').Router()
 const {databaseSeed} = require('../services/apifetch.service')
 const Book = require('../models/Book')
 
-/*
+
 router.get('/data/seed', async (req, res) => {
     try{
         await databaseSeed()
@@ -14,7 +14,7 @@ router.get('/data/seed', async (req, res) => {
         console.log("Error", e.message);
     }
 })
-*/
+
 
 router.get('/:isbn', async (req, res) => {
     const {isbn} = req.params
@@ -31,6 +31,7 @@ router.get('/:isbn', async (req, res) => {
         model: 'User'
         }
     }])
+    res.render('bookShowPage', {book})
 })
 
 

@@ -29,6 +29,10 @@ const bookSchema = new mongoose.Schema({
     },
     pages: {
         type: Number
+    },
+    cover: {
+        type: String,
+        default: 'https://islandpress.org/sites/default/files/default_book_cover_2015.jpg'
     }
 
 })

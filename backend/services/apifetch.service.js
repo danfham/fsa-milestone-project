@@ -22,14 +22,16 @@ async function databaseSeed(){
                     title: doc[i].title,
                     author: doc[i].author_name[0],
                     releaseDate: Math.min(doc[i].publish_year),
-                    isbn: typeof doc[i].isbn[0] === String ? doc[i].isbn[0] : '',
-                    pages: typeof doc[i].number_of_pages_median === Number ? doc[i].number_of_pages_median : 0,
-                    averageRating: 0
+                    isbn: doc[i].isbn[0],
+                    pages: doc[i].number_of_pages_median,
+                    averageRating: 0,
+                    cover: `https://covers.openlibrary.org/b/isbn/${doc[i].isbn[0]}-M.jpg`
                 }
     
                 saveBook(book)
             }
             catch{
+                console.log('failed')
                 continue
             }
         }
