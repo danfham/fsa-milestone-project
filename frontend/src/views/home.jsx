@@ -5,6 +5,9 @@ function Home() {
       <p>
         hello world!
       </p>
+      <a href="/view">
+        <button className="btn-primary">Enter the Library</button>
+      </a>
       </main>
     );
   }
