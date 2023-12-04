@@ -1,8 +1,6 @@
-// src/components/Auth.js
-
 import React, { useState } from 'react';
 import axios from 'axios';
-import './styles/Auth.css'; // Import the CSS file
+import './Auth.css';
 
 const Auth = () => {
   const [email, setEmail] = useState('');
@@ -72,4 +70,8 @@ const Auth = () => {
 };
 
 export default Auth;
+
+
+
+
 

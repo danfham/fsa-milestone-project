@@ -26,12 +26,6 @@
     "eject": "react-scripts eject",
     "dev": "npx nodemon server.js -e .js,.jsx"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",

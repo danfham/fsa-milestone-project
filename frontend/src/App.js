@@ -1,14 +1,18 @@
-//import logo from './logo.svg';
-//import './App.css';
+// src/App.js
+
+import React from 'react';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header>
-        "Hello World"
-      </header>
+    <div className="app-container">
+      <p>
+        hello world!
+      </p>
     </div>
   );
 }
 
 export default App;
+
+  
