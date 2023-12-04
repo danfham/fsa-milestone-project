@@ -1,7 +1,8 @@
 const express = require('express')
 require('dotenv').config()
 const mongoose = require('mongoose')
-const userRoutes = require('./controllers/books')
+const userRoutes = require('./controllers/users')
+const bookRoutes = require('./controllers/book')
 
 const app = express()
 
@@ -19,6 +20,9 @@ mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true})
 app.use('/users', require('./controllers/users'))
 app.use('/authentication', require('./controllers/authentication'))   
 */
+
+app.use('/user', userRoutes)
+app.use('/book', bookRoutes)
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
