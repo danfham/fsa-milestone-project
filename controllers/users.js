@@ -22,6 +22,24 @@ router.get('/', async (req, res) => {
     res.json(users)
 })
 
+router.get('/login', async (req, res) => {
+    input = req.body
+    
+    try{
+        user = User.findOne({userName: input.userName}) 
+    } 
+    catch{
+        res.status(404).send('User not found')
+    }
+
+    if(user.password === bcrypt.hash(input.password,10)){
+        res.redirect('http://localhost:3000/book/0720610311')
+    }
+    else{
+        res.status(404).send('Password incorrect')
+    }
+})
+
 // GET seed data
 router.get('/login', async (req, res) => {
     res.render('users/LoginForm')
