@@ -22,7 +22,7 @@ router.get('/', async (req, res) => {
     res.json(users)
 })
 
-router.get('/login', async (req, res) => {
+router.get('/login/request', async (req, res) => {
     input = req.body
     
     try{
