@@ -25,6 +25,16 @@ router.get('/', async (req, res) => {
 })
 
 // GET seed data
+router.get('/login', async (req, res) => {
+    res.render('users/LoginForm')
+})
+
+// GET seed data
+router.get('/signup', async (req, res) => {
+    res.render('users/SignUpForm')
+})
+
+// GET seed data
 router.get('/seed', async (req, res) => {
     await Promise.all(User.deleteMany())
     const user = await User.insertMany(UserSeedData)

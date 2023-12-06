@@ -5,10 +5,6 @@ require('../models/Review')
 require('../models/Rating')
 require('../models/User')
 
-
-
-
-
 // GET page of all itineraries
 router.get('/', async (req,res) =>{
     const book = await Book.find()
