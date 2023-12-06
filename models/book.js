@@ -41,9 +41,11 @@ bookSchema.methods.getRating = function(){
     
     average = 0
 
-    for(i=0; i < ratings.length; i++){
-        average += ratings[i]
+    for(i=0; i < this.ratings.length; i++){
+        average += this.ratings[i]
     }
+
+    average /= this.ratings.legnth
 
     return average
 }

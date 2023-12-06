@@ -5,7 +5,7 @@ const reviewSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Book'
     },
-    review:{
+    body:{
         type: String
     },
     date:{
