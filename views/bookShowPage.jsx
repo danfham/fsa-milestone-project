@@ -1,45 +1,22 @@
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router";
-
+const React = require('react')
 
 function BookShowPage({book}) {
-
-	const history = useNavigate()
+	console.log(book.title)
+	bookRating = Math.round(100*book.rating)/100
 	
-	const [books, setBooks] = useState([])
-
-	useEffect(() => {
-		const fetchData = async () => {
-			const response = await fetch(`http://localhost:5000/book`)
-			const resData = await response.json()
-			setBooks(resData)
-		}
-		fetchData()
-	}, [])
-
-  
-	let booksFormatted = books.map((book) => {
-		return (
-			<div className="col-sm-6" key={book.bookId}>
-				<h2>
-					<a href="#" onClick={() => history.push(`/view/${book.bookId}`)} >
-						{book.title}
-					</a>
-				</h2>
-				<p className="text-center">
-					Written in {book.author}, {place.releaseDate}
-				</p>
+	return(
+		<div>
+			<img src={book.cover} alt={book.title}/>
+			<div>
+				<h1>{book.title}</h1>
+				<script></script>
+				<h2>Rating: {bookRating}</h2>
 			</div>
-		)
-	})
-	return (
-		<main>
-			<h1>Library</h1>
-			<div className="row">
-				{booksFormatted}
-			</div>
-		</main>
+		</div>
+		
 	)
+  
+	
 }
   
-export default BookShowPage;
+module.exports = BookShowPage;

@@ -1,6 +1,9 @@
 const router = require('express').Router()
 const {databaseSeed} = require('../services/apifetch.service')
 const Book = require('../models/Book')
+require('../models/Rating')
+require('../models/Review')
+require('../models/User')
 
 // GET page of all itineraries
 router.get('/', async (req,res) =>{
@@ -23,7 +26,7 @@ router.get('/data/seed', async (req, res) => {
 
 router.get('/:isbn', async (req, res) => {
     const {isbn} = req.params
-    const book = await Book.find(b => b.isbn === isbn).populate([{
+    const book = await Book.findOne({isbn: isbn}).populate([{
         path: 'ratings',
         populate: {
         path: 'user',

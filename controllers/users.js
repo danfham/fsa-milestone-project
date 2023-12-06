@@ -22,7 +22,7 @@ router.get('/', async (req, res) => {
 
 router.get('/:userName', async (req, res) => {
     const {userName} = req.params
-    const user = await User.find(u => u.userName === userName).populate([{
+    const user = await User.find({userName: userName}).populate([{
         path: 'ratings',
         populate: {
         path: 'book',
