@@ -10,6 +10,7 @@ function Home({book},{user}){
         <div className='main-container'>
           <label htmlFor="search">Book Search:</label>
           <input type="text" id="search" onInput='' />
+          <button type="button" onclick="submit">Search!</button>
         </div>
       </body>
     </Default>
