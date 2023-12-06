@@ -2,7 +2,7 @@ const React = require( 'react')
 const Default = require('./layouts/default')
 
 // will need to pass in users 
-function Home(){
+function Home({book},{user}){
 
   return(
     <Default>

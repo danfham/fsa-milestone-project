@@ -1,9 +1,8 @@
 const router = require('express').Router()
 const {databaseSeed} = require('../services/apifetch.service')
 const Book = require('../models/Book')
-require('../models/Rating')
-require('../models/Review')
-require('../models/User')
+
+
 
 // GET page of all itineraries
 router.get('/', async (req,res) =>{

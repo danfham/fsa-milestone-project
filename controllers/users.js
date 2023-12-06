@@ -1,6 +1,7 @@
 const router = require('express').Router()
 const User = require('../models/User')
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcrypt');
+const UserSeedData = require('../models/UserSeedData');
 
 // const { User } = db
 
@@ -18,6 +19,13 @@ router.post('/', async (req, res) => {
 router.get('/', async (req, res) => {
     const users = await User.findAll()
     res.json(users)
+})
+
+// GET seed data
+router.get('/seed', async (req, res) => {
+    await Promise.all(User.deleteMany())
+    const user = await User.insertMany(UserSeedData)
+    res.send(user)
 })
 
 router.get('/:userName', async (req, res) => {
