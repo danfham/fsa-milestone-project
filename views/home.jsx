@@ -1,5 +1,5 @@
-import React from 'react';
-import Default from './layouts/default'
+const React = require( 'react')
+const Default = require('./layouts/default')
 
 // will need to pass in users 
 function Home(){
