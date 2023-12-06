@@ -14,7 +14,7 @@ function LoginForm() {
                     <label htmlFor="password">Password:</label>
                     <input type="password" id="password" name="password" />
 
-                    <button type="button" onclick="login()">Login</button>
+                    <button type="button" onclick="submit">Login</button>
                 </form>
             </main>
         </Default>
