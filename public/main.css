@@ -41,7 +41,8 @@ body {
   /* Main container for trip information */
   .main-container {
     max-width: 800px;
-    margin: 0 auto;
+    margin-right:auto;
+    margin-left:auto;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);

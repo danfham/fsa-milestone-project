@@ -11,17 +11,17 @@ function Default(html) {
     <body>
       <nav className="navbar navbar-expand-xxl bg-dark navbar-dark py-3 justify-content-between justify-content-xxl-start">
         <div className="container-fluid">
-          <a className="navbar-brand" href=""><h1>Home</h1></a>
+          <a className="navbar-brand" href="/book"><h1>Home</h1></a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#idCollapse">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="idCollapse">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" href=""><h2>Login</h2></a>
+                <a className="nav-link" href="/login"><h2>Login</h2></a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href=""><h2>Sign Up</h2></a>
+                <a className="nav-link" href="/signup"><h2>Sign Up</h2></a>
               </li>
             </ul>
           </div>
