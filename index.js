@@ -1,8 +1,8 @@
 const express = require('express')
 require('dotenv').config()
 const mongoose = require('mongoose')
-const userRoutes = require('./backend/controllers/users')
-const bookRoutes = require('./backend/controllers/book')
+const userRoutes = require('./controllers/users')
+const bookRoutes = require('./controllers/book')
 
 const app = express()
 
@@ -11,7 +11,7 @@ const app = express()
 // app.use(methodOverride('_method'))
 app.use(express.urlencoded({extended: true}))
 app.use(express.static('public'))
-app.set('views', __dirname + './frontend/views')
+app.set('views', __dirname + './views')
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 

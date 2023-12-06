@@ -1,55 +1,12 @@
 {
   "name": "milestone3",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "bcrypt": "^5.1.1",
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2",
-    "express-react-views": "^0.11.0",
-    "method-override": "^3.0.0",
-    "mongoose": "^8.0.1",
-    "mysql2": "^3.6.5",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "^5.0.1",
-    "sass": "^1.69.5",
-    "sequelize": "^6.35.1",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "dev": "npx nodemon server.js -e .js,.jsx"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "version": "1.0.0",
+  "description": "Book Review Hub",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/danfham/fsa-milestone-project.git"
+  "scripts": {
+    "dev": "npx nodemon index.js -e .js,.jsx"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/danfham/fsa-milestone-project/issues"
-  },
-  "homepage": "https://github.com/danfham/fsa-milestone-project#readme"
+  "license": "ISC"
 }
