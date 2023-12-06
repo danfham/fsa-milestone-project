@@ -7,7 +7,7 @@ function Home(){
   return(
     <Default>
       <body>
-        <div>
+        <div className='main-container'>
           <label htmlFor="search">Book Search:</label>
           <input type="text" id="search" onInput='' />
         </div>
@@ -16,8 +16,6 @@ function Home(){
 
   )
 };
-
-
 
 
 export default Home;
