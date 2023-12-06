@@ -4,7 +4,7 @@
   "description": "Book Review Hub",
   "main": "index.js",
   "scripts": {
-    "dev": "node index.js -e .js,.jsx"
+    "dev": "node index.js -e .js,.jsx npm install --legacy-peer-deps"
   },
   "keywords": [],
   "author": "",
