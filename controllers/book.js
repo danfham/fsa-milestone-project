@@ -1,6 +1,11 @@
 const router = require('express').Router()
 const {databaseSeed} = require('../services/apifetch.service')
 const Book = require('../models/Book')
+require('../models/Review')
+require('../models/Rating')
+require('../models/User')
+
+
 
 
 

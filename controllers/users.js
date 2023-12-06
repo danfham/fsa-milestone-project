@@ -2,6 +2,9 @@ const router = require('express').Router()
 const User = require('../models/User')
 const bcrypt = require('bcrypt');
 const UserSeedData = require('../models/UserSeedData');
+require('../models/Review')
+require('../models/Rating')
+require('../models/Book')
 
 // const { User } = db
 
