@@ -5,7 +5,7 @@ const Book = require('../models/Book')
 // GET page of all itineraries
 router.get('/', async (req,res) =>{
     const book = await Book.find()
-    res.render('home', {book})
+    res.render('Home', {book})
 })
 
 router.get('/data/seed', async (req, res) => {
