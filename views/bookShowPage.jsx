@@ -20,9 +20,14 @@ function BookShowPage({book}) {
 			<div>
 				<img src={book.cover} alt={book.title}/>
 				<div>
-					<h1>{book.title}</h1>
+					<h1>{book.title} ({book.releaseDate})</h1>
+					<h2>{book.author}</h2>
 					<h2>Rating: {bookRating}/5.00</h2>
-					<h2>submit Rating</h2>
+					<div>
+						<h2>submit Rating</h2>
+						<form></form>
+					</div>
+					
 				</div>
 			</div>
 			<div>
