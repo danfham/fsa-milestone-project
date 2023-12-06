@@ -1,3 +1,4 @@
+//forcing correct caplization  in github
 const mongoose = require('mongoose')
 
 const bookSchema = new mongoose.Schema({
