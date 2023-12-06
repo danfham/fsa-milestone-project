@@ -16,8 +16,7 @@ app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 
 // MongoDB Connection
-console.log(process.env.MONGO_URI)
-mongoose.connect(string(process.env.MONGO_URI), {useNewUrlParser: true})
+mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true})
     .then(() => console.log('DB connected'))
     .catch(err => console.error(err))
 
