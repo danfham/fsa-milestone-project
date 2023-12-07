@@ -25,7 +25,7 @@ app.use('/user', userRoutes)
 app.use('/book', bookRoutes)
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Home')
 })
 
 port=process.env.PORT

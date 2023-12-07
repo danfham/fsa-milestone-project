@@ -14,7 +14,7 @@ function SignUpForm() {
                     <label htmlFor="password">Password:</label>
                     <input type="password" id="password" name="password" />
 
-                    <button type="button" onclick="submit">Sign Up!</button>
+                    <button type="button" onClick="submit">Sign Up!</button>
                 </form>
             </main>
         </Default>

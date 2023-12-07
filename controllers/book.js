@@ -7,8 +7,7 @@ require('../models/User')
 
 // GET page of all itineraries
 router.get('/', async (req,res) =>{
-    const book = await Book.find()
-    res.render('Home', {book})
+    res.render('Home')
 })
 
 router.get('/data/seed', async (req, res) => {
@@ -23,6 +22,17 @@ router.get('/data/seed', async (req, res) => {
     }
 })
 
+router.get('/search', async (req, res) => {
+    const search = req.params
+    console.log(search)
+    try{
+        const book = await search.findOne({title: search})
+        res.status(303).redirect(`/book/${book.isbn}`)
+    }
+    catch{
+        res.status(404).send('Could not find book')
+    }
+})
 
 router.get('/:isbn', async (req, res) => {
     const {isbn} = req.params
